@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Roboto+Slab:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+html, body{
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: linear-gradient(#c345,#c1cde7);
+    color: #15001c;
+}
+
+h1{
+font-family: 'Roboto Slab', serif;
+}
+
+a {
+    color: #61416d;
+    text-decoration: none;
+}
+
+a:hover, a.active {
+    color: #361942;
+    transition: color ease .5s;
+}
+
+div.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+nav, footer {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+}
+
+nav p, footer p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+}
+
+.active {
+    text-decoration: underline;
+    color: black;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    height: 80vh;
+}
+
+main div {
+    width: 50%;
+    margin:auto;
+    line-height: 1.5;
+    text-align: right;
+}
+
+main div p{
+    background-image: url('images/smile.svg');
+    background-size: 1rem 1rem;
+    background-repeat:no-repeat;
+    background-position: 0 0.15rem;
+    text-indent: 1.5rem;
+}
+
+main div p:hover{
+    opacity:0;
+    transform:rotate(0.5turn);
+    transform-origin: center-center;
+    transition:all ease 3s;
+}
+    
+main div h1, main div p{
+    text-align: left;
+}
+
+main div img{
+    height:50vh;
+    width:auto;
+    margin: 0 auto;
+    transform:rotate(0.5turn);
+    transform-origin: center-center;
+    transition:all ease 3s;
+}
+
+@media (orientation:portrait){
+
+    main {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        height: auto;
+        min-height: 80vh
+    }
+
+    main div {
+        width: 100%;
+        margin:auto;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    main div p{
+    background-image: url('images/smile.svg');
+    background-size: 2rem 2rem;
+    background-repeat:no-repeat;
+    background-position: top center;
+    padding-top: 3rem;
+    }
+
+    main div h1, main div p{
+        text-align: center;
+    }
+
+    main div img{
+        max-width:100vw;
+        height:auto;
+        margin: 1rem 0;
+    }   
+
+}
